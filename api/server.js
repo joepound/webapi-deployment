@@ -12,7 +12,8 @@ server.get('/', async (req, res) => {
   try {
     const shoutouts = await db('shoutouts');
 
-    res.status(200).json(shoutouts);
+    // res.status(200).json(shoutouts);
+    res.status(200).json("Boss, I need arrays.")
   } catch (error) {
     console.error('\nERROR', error);
     res.status(500).json({ error: 'Cannot retrieve the shoutouts' });
